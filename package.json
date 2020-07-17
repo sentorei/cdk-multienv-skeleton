@@ -1,8 +1,8 @@
 {
-  "name": "cdk-multienv-skeleteon",
+  "name": "cdk-multienv-skeleton",
   "version": "0.1.0",
   "bin": {
-    "cdk-multienv-skeleteon": "bin/cdk-multienv-skeleteon.js"
+    "cdk-multienv-skeleton": "bin/cdk-multienv-skeleton.js"
   },
   "scripts": {
     "build": "tsc",

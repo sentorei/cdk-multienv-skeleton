@@ -1,14 +1,14 @@
-# Welcome to your CDK TypeScript project!
+## 概要
+- 複数の環境へのデプロイを共通のテンプレートを利用して実施するためのサンプルプロジェクト
 
-This is a blank project for TypeScript development with CDK.
+## 初期設定
+- `EnvironmentDefinition.envAccount`に開発/本番アカウントの情報を定義
+```
+        dev: { account: 'your-account-id', region: 'ap-northeast-1' },
+        prod: { account: 'your-account-id', region: 'ap-northeast-1' },
+```
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+## デプロイ
+- `context`で `dev` or `prod` を与えることでそれぞれのアカウントにスタックがデプロイされる
+- `cdk deploy -c dev`      deploy this stack to your default AWS account/region
+- `cdk deploy -c prod`     deploy this stack to your default AWS account/region
