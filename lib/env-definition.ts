@@ -16,7 +16,7 @@ export class EnvironmentDefinition {
 
     constructor(targetEnv: string) {
         // 対象環境が定義されていない場合は明示的にエラーとする
-        if (targetEnv === 'undefined') throw new Error('Environment variable TARGET_ENV is not defined.')
+        if (targetEnv === undefined) throw new Error('Environment variable TARGET_ENV is not defined.')
         this.targetEnv = targetEnv
     }
 
